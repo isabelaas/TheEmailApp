@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.theemailapp.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_newEmailFragment"
+            app:destination="@id/newEmailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fragment_calendard"
+            app:destination="@id/fragment_calendard" />
+    </fragment>
+    <fragment
+        android:id="@+id/newEmailFragment"
+        android:name="com.example.theemailapp.fragments.NewEmailFragment"
+        android:label="NewEmailFragment" >
+        <action
+            android:id="@+id/action_newEmailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_calendard"
+        android:name="com.example.theemailapp.fragment_calendard"
+        android:label="fragment_calendard" >
+        <action
+            android:id="@+id/action_fragment_calendard_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+</navigation>
